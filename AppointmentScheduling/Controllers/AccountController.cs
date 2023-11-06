@@ -4,6 +4,7 @@ using AppointmentScheduling.Models.ViewModels;
 using AppointmentScheduling.Utility;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 
 namespace AppointmentScheduling.Controllers
 {
@@ -23,6 +24,12 @@ namespace AppointmentScheduling.Controllers
                 
         }
         public IActionResult Login()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Login(LoginViewModel model)
         {
             return View();
         }
