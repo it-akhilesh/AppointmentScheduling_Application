@@ -1,5 +1,6 @@
 using AppointmentScheduling.Data;
 using AppointmentScheduling.Models;
+using AppointmentScheduling.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,6 +11,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer
 (builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddTransient<IAppointmentService, AppointmentService>();
 
 builder.Services.AddIdentity<ApplicationUser,IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
 var app = builder.Build();
