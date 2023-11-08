@@ -3,6 +3,7 @@
 });
 
 function InitializeCalendar() {
+    
     try {
         $('#calendar').fullCalendar({
             timezone: false,
