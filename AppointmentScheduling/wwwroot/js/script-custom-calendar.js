@@ -5,15 +5,15 @@
 function InitializeCalendar() {
 
     try {
-        var calendar;
-        let calendarEl = document.getElementById('calendar');
+        //var calendar;
+        var calendarEl = document.getElementById('calendar');
         if (calendarEl != null) {
             let calendar = new FullCalendar.Calendar(calendarEl, {
                 initialView: 'dayGridMonth',
                 headerToolbar: {
                     left: 'prev,next,today',
                     center: 'title',
-                    right: 'month,agendaWeek,agendaDay'
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay'
                 },
                 selectable: true,
                 editable: false,
