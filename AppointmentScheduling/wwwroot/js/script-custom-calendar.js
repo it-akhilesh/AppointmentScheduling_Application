@@ -1,4 +1,5 @@
-﻿$(document).ready(function () {
+﻿var routeURL = location.protocol + "//" + location.host;
+$(document).ready(function () {
     $("#appointmentDate").KendoDateTimePicker({
         value: new Date(),
         dateInput: false
