@@ -1,9 +1,10 @@
 ﻿var routeURL = location.protocol + "//" + location.host;
 $(document).ready(function () {
-    $("#appointmentDate").KendoDateTimePicker({
+    $("#appointmentDate").kendoDateTimePicker({
         value: new Date(),
         dateInput: false
     });
+   
     InitializeCalendar();
 });
 
@@ -49,4 +50,9 @@ function onSubmitForm() {
         DoctorId: $("#doctorId").val(),
         PatientId: $("#patientId").val(),
     };
+
+    $.ajax({
+        url: routeURL + '/api/Appointment/SaveCalendarDate',
+        type: 'POST',
+    })
 }
