@@ -101,7 +101,7 @@ function onShowModal(obj, isEventDetail) {
     $("#appointmentInput").modal("show");
 }
 function onCloseModal() {
-    $("appointmentForm")[0].reset();
+    $("#appointmentForm")[0].reset();
     $("#id").val(0);
     $("#title").val('');
     $("#description").val('');
@@ -162,6 +162,7 @@ function checkValidation() {
     else {
         $("#appointmentDate").removeClass('error');
     }
+    return isValid;
 }
 
 function getEventDetailsByEventId(info) {
