@@ -2,20 +2,19 @@
 {
     public class AppointmentVM
     {
-        public int? Id { get; set; }
-        public string Title { get; set; }
-        public string Description { get; set; }
-        public string StartDate { get; set; }
-        public string EndDate { get; set; }
-        public int Duration { get; set; }
-        public string DoctorId { get; set; }
-        public string PatientId { get; set; }
-        public bool IsDoctorApproved { get; set; }
-        public string AdminId { get; set; }
-
-        public string DoctorName { get; set; }
-        public string PatientName { get; set; }
-        public string AdminName { get; set; }
-        public bool IsForClient { get; set; }
+        public int? Id { get; set; } = null;
+        public string Title { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
+        public string StartDate { get; set; } = string.Empty;
+        public string EndDate { get; set; } = string.Empty;
+        public int Duration { get; set; } = 0;
+        public string DoctorId { get; set; } = string.Empty;
+        public string PatientId { get; set; } = string.Empty;
+        public bool IsDoctorApproved { get; set; } = false;
+        public string AdminId { get; set; } = string.Empty;
+        public string DoctorName { get; set; } = string.Empty;
+        public string PatientName { get; set; } = string.Empty;
+        public string AdminName { get; set; }=string.Empty;
+        public bool IsForClient { get; set; }= false;
     }
 }
